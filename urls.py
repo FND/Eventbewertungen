@@ -7,6 +7,6 @@ urlpatterns = patterns('',
     (r'^polls/', include('polls.urls')),
     (r'^admin/', include(admin.site.urls)),
     (r'^accounts/login/', include('login.urls')),
-    (r'^vortrag/', include('vortrag.urls')),
+    (r'^talks/', include('talks.urls')),
     (r'^events/', include('events.urls')),
 )

@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import *
-from django.views.generic import ListView
+from django.views.generic import DetailView, ListView
 from events.models import Event
+from talks.models import Talk
 
 urlpatterns = patterns('',
     (r'^$',
@@ -10,6 +11,6 @@ urlpatterns = patterns('',
             template_name='events/index.html')),
     (r'^(?P<pk>\d+)/$',
         DetailView.as_view(
-            model=event,
-            template_name='event/detail.html')),
+            model=Talk,
+            template_name='talks/detail.html')),
 )

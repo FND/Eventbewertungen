@@ -1,0 +1,9 @@
+{% if latest_talk_list %}
+	    <ul>
+	    {% for talk in latest_talk_list %}
+	        <li><a href="/vortrag/{{ vortrag.id }}/">{{ talk.name }}</a></li>
+	    {% endfor %}
+	    </ul>
+	{% else %}
+	    <p>No talk available.</p>
+	{% endif %}

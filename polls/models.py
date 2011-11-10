@@ -1,12 +1,12 @@
 from django.db import models
 import datetime
-from vortrag.models import Vortrag
+from talks.models import Talk
 
 # Create your models here.
 
     
 class Poll(models.Model):
-    vortrag = models.ForeignKey(Vortrag)
+    talk = models.ForeignKey(Talk)
     question = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
 

@@ -123,7 +123,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.redirects',
     'polls',
-    'vortrag',
+    'talks',
     'events',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
