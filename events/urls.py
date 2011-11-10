@@ -8,4 +8,8 @@ urlpatterns = patterns('',
             queryset=Event.objects.order_by('-pub_date'),
             context_object_name='latest_events_list',
             template_name='events/index.html')),
+    (r'^(?P<pk>\d+)/$',
+        DetailView.as_view(
+            model=event,
+            template_name='event/detail.html')),
 )

@@ -12,9 +12,4 @@ urlpatterns = patterns('',
         DetailView.as_view(
             model=Vortrag,
             template_name='vortrag/detail.html')),
-    url(r'^(?P<pk>\d+)/results/$',
-        DetailView.as_view(
-            model=Vortrag,
-            template_name='vortrag/results.html'),
-        name='vortrag_results'),
         )
