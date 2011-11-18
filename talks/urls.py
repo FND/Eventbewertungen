@@ -7,10 +7,10 @@ urlpatterns = patterns('',
     (r'^$',
         ListView.as_view(
             queryset=Talk.objects.order_by('-pub_date'),
-            context_object_name='latest_vortrag_list',
-            template_name='talk/index.html')),
+            context_object_name='latest_talk_list',
+            template_name='talks/index.html')),
     (r'^(?P<pk>\d+)/$',
         DetailView.as_view(
             model=Poll,
-            template_name='poll/detail.html')),
+            template_name='talks/detail.html')),
         )
