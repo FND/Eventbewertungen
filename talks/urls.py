@@ -11,6 +11,6 @@ urlpatterns = patterns('',
             template_name='talks/index.html')),
     (r'^(?P<pk>\d+)/$',
         DetailView.as_view(
-            model=Poll,
+            model=Talk,
             template_name='talks/detail.html')),
         )
