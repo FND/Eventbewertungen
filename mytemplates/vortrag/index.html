@@ -1,9 +1,0 @@
-{% if latest_vortrag_list %}
-	    <ul>
-	    {% for vortrag in latest_vortrag_list %}
-	        <li><a href="/vortrag/{{ vortrag.id }}/">{{ vortrag.name }}</a></li>
-	    {% endfor %}
-	    </ul>
-	{% else %}
-	    <p>No vortrag available.</p>
-	{% endif %}
