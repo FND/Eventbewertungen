@@ -18,10 +18,10 @@ class TalkAdmin(admin.ModelAdmin):
     search_fields = ['name']
     date_hierarchy = 'pub_date'
 
-    def save_model(self, request, obj, form, change):
-        poll = Poll.objects.create(question="Das Thema war:", pub_date=datetime.datetime.now())
-        Talk.objects.add(poll)
-        Talk.save()
+#    def save_model(self, request, obj, form, change):
+#        poll = Poll.objects.create(question="Das Thema war:", pub_date=datetime.datetime.now())
+#        Talk.objects.add(poll)
+#        Talk.save()
 
 admin.site.register(Talk, TalkAdmin)
 

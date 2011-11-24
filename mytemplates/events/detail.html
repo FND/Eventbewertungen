@@ -1,9 +1,16 @@
-{% if latest_talk_list %}
-	    <ul>
-	    {% for talk in latest_talk_list %}
-	        <li><a href="/vortrag/{{ vortrag.id }}/">{{ talk.name }}</a></li>
-	    {% endfor %}
-	    </ul>
-	{% else %}
-	    <p>No talk available.</p>
-	{% endif %}
+{% extends "base.html" %}
+
+{% block title %}{{ talk.name }}{% endblock %}
+
+{% block content %}
+
+{% if event != None %}
+    <ul>
+        {% for talk in event.talk_set.all %}
+            <li><a href="/talks/{{ talk.id }}/">{{ talk.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No talk available.</p>
+{% endif %}
+{% endblock %}

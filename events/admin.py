@@ -16,4 +16,9 @@ class EventAdmin(admin.ModelAdmin):
     search_fields = ['name']
     date_hierarchy = 'pub_date'
 
+    class Media:
+        css = {
+        'all': ('base.css',),
+        }
+
 admin.site.register(Event, EventAdmin)

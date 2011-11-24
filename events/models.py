@@ -10,3 +10,6 @@ class Event(models.Model):
 
     def was_published_today(self):
         return self.pub_date.date() == datetime.date.today()
+
+    def pub_date_ft(self):
+        return self.pub_date.strftime("%A, %d. %B %Y ")

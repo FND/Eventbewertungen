@@ -1,9 +1,19 @@
+{% extends "base.html" %}
+
+{{ index.media }}
+
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+<h1> Events</h1>
 {% if latest_events_list %}
 	    <ul>
 	    {% for event in latest_events_list %}
-	        <li><a href="/events/{{ event.id }}/">{{ event.name }}</a></li>
+	        <li><a href="/events/{{ event.id }}/">{{ event.name }}</a> {{ event.pub_date_ft }}</li>
 	    {% endfor %}
 	    </ul>
 	{% else %}
 	    <p>No events available.</p>
 	{% endif %}
+{% endblock %}
