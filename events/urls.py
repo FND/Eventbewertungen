@@ -13,9 +13,6 @@ urlpatterns = patterns('',
      DetailView.as_view(
          model=Event,
          template_name='events/detail.html')),
-<<<<<<< HEAD
     (r'^(?P<event_id>\d+)/results/$', 'events.views.results'),
-=======
     (r'^(?P<event_id>\d+)/talk/$', 'events.views.talk'),
->>>>>>> 9a5752a79be82c9d1e0ee9138171a0b5b021521d
 )
