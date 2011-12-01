@@ -17,6 +17,9 @@ def talk(request):
     pass
 
 def results(request, event_id):
-    now = datetime.datetime.now()
-    html = "<html><body>It is now %s.</body></html>" % now
-    return HttpResponse(html)
+    p = get_object_or_404(Event, pk=event_id)
+
+
+
+    return render_to_response('events/results.html', {'event': p},
+                               context_instance=RequestContext(request))
