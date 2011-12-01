@@ -8,6 +8,8 @@ class ChoiceInline(admin.TabularInline):
 class PollAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['question']}),
+        (None,               {'fields': ['classification_top']}),
+        (None,               {'fields': ['classification_low']}),
         ('Date information', {'fields': ['pub_date']}),
     ]
     inlines = [ChoiceInline]

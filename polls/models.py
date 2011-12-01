@@ -8,6 +8,8 @@ from talks.models import Talk
 class Poll(models.Model):
     talk = models.ForeignKey(Talk)
     question = models.CharField(max_length=200)
+    classification_top = models.CharField(max_length=200)
+    classification_low = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
 
     def __unicode__(self):
