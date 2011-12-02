@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import *
 from django.views.generic import DetailView, ListView
 from polls.models import Poll
+from polls.models import Comment
 
 urlpatterns = patterns('',
     (r'^$',
