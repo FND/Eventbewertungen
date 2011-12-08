@@ -4,28 +4,28 @@
 
 {% block content %}
 
-<h2>{{ event.name }}</h2>
+<h2>Event: {{ event.name }}</h2>
 
 {% if event != None %}
         {% for talk in event.talk_set.all %}
-            <div>
-                <label>{{ talk.name }}</label>
+            <fieldset>
+                <h3>{{ talk.name }}</h3>
+            
             {% for poll in talk.poll_set.all %}
                 <div>
                     <table>
                         <tr>
-                            <th>{{ poll.question }}</th>
-                        </tr>
+                            <td>{{ poll.question }}</td>
+                            <td>{{ poll.classification_top }}</td>
                         {% for choice in poll.choice_set.all %}
-                            <tr>
-                                <td>Choice: {{ choice.choice }}</td>
-                                <td>Votes: {{ choice.votes }}</td>
-                            </tr>
+                            <td>{{ choice.votes }}</td>
                         {% endfor %}
+                            <td>{{ poll.classification_low }}</td>
+                        </tr>
                     </table>
                 </div>
             {% endfor %}
-            </div>
+            </fieldset>
         {% endfor %}
 {% else %}
     <p>No talk available.</p>
