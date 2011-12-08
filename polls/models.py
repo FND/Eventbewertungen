@@ -25,3 +25,14 @@ class Choice(models.Model):
 
     def __unicode__(self):
         return self.choice
+
+class Comment(models.Model):
+    talk = models.ForeignKey(Talk)
+    comment = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+
+    def __unicode__(self):
+        return self.comment
+
+    def was_published_today(self):
+        return self.pub_date.date() == datetime.date.today()

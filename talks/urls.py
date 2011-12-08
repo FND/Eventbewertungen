@@ -2,6 +2,7 @@ from django.conf.urls.defaults import *
 from django.views.generic import DetailView, ListView
 from talks.models import Talk
 from polls.models import Poll
+from polls.models import Comment
 
 urlpatterns = patterns('',
     (r'^$',
@@ -13,4 +14,8 @@ urlpatterns = patterns('',
         DetailView.as_view(
             model=Talk,
             template_name='talks/detail.html')),
+    (r'^(?P<pk>\d+)/comments/$',
+        DetailView.as_view(
+            model=Talk,
+            template_name='talks/comments.html')),
         )
