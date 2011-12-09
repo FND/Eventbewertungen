@@ -19,9 +19,5 @@ def talk(request):
 
 def results(request, event_id):
     p = get_object_or_404(Event, pk=event_id)
-    
-    #q = get_object_or_404(Talk, pk=talk_id)
-    # in render_to_response: {'talk' : q},
-
     return render_to_response('events/results.html', {'event': p},
                                context_instance=RequestContext(request))

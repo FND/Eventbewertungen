@@ -24,7 +24,8 @@ class EventTestCase(unittest.TestCase):
     def setUp(self):
         self.event1 = Event.objects.create(name="Event1", pub_date=datetime.datetime.now())
         self.event2 = Event.objects.create(name="Event2", pub_date=datetime.datetime.now())
-
+        self.client = Client()
+        
     def test(self):
         self.assertEqual(self.event1.name, 'Event1')
         self.assertEqual(self.event2.name, 'Event2')
@@ -35,3 +36,5 @@ class EventTestCase(unittest.TestCase):
         testevent = Event.objects.get(id=1)
         self.assert_(testevent != None)
         self.assert_(testevent.name == "Event1")
+
+
