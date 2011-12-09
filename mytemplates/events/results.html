@@ -10,21 +10,31 @@
         {% for talk in event.talk_set.all %}
             <fieldset>
                 <h3>{{ talk.name }}</h3>
-            
+                <table>
             {% for poll in talk.poll_set.all %}
                 <div>
-                    <table>
-                        <tr>
-                            <td>{{ poll.question }}</td>
+                    <tr>
+                         <td> {{ poll.question }} </td>
                             <td>{{ poll.classification_top }}</td>
                         {% for choice in poll.choice_set.all %}
                             <td>{{ choice.votes }}</td>
                         {% endfor %}
                             <td>{{ poll.classification_low }}</td>
                         </tr>
-                    </table>
-                </div>
+                
             {% endfor %}
+            </table>
+            {% if talk.comment_set.all != None %}
+            <h4> Kommentare</h4>
+                <ul>
+                    {% for comment in talk.comment_set.all %}
+                    <li>{{ comment.comment }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                    <p>No comments available.</p>
+                {% endif %} 
+            </div>
             </fieldset>
         {% endfor %}
 {% else %}
