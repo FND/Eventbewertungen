@@ -14,3 +14,8 @@ class SimpleTest(TestCase):
         Tests that 1 + 1 always equals 2.
         """
         self.assertEqual(1 + 1, 2)
+
+    def test_event_result(self):
+        response = self.client.get("/events/1/results/")
+        self.assertEqual(response.status_code, 200)
+        self.assertIsNotNone(response.context['event'])
