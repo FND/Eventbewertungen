@@ -28,7 +28,7 @@ class Choice(models.Model):
 
 class Comment(models.Model):
     talk = models.ForeignKey(Talk)
-    comment = models.CharField(max_length=200)
+    comment = models.CharField(max_length=1000)
     pub_date = models.DateTimeField('date published')
 
     def __unicode__(self):

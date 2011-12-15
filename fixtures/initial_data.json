@@ -1,11 +1,46 @@
 [
     {
         "pk": 1,
+        "model": "events.event",
+        "fields": {
+            "pub_date": "2011-12-08 17:00:44",
+            "name": "Event1"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "talks.talk",
+        "fields": {
+            "pub_date": "2011-12-08 17:01:00",
+            "event": 1,
+            "name": "Talk1"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "talks.talk",
+        "fields": {
+            "pub_date": "2011-12-08 17:01:02",
+            "event": 1,
+            "name": "Talk2"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "talks.talk",
+        "fields": {
+            "pub_date": "2011-12-08 17:01:04",
+            "event": 1,
+            "name": "Talk3"
+        }
+    },
+    {
+        "pk": 1,
         "model": "polls.poll",
         "fields": {
-            "pub_date": "2011-11-18 13:31:21",
+            "pub_date": "2011-12-08 17:02:12",
             "classification_low": "uninteressant",
-            "question": "Das Thema war",
+            "question": "Question1",
             "classification_top": "interessant",
             "talk": 1
         }
@@ -14,9 +49,9 @@
         "pk": 2,
         "model": "polls.poll",
         "fields": {
-            "pub_date": "2011-11-18 13:31:23",
+            "pub_date": "2011-12-08 17:02:13",
             "classification_low": "schlecht",
-            "question": "Den Inhalt bewerte ich als",
+            "question": "Question2",
             "classification_top": "gut",
             "talk": 1
         }
@@ -25,10 +60,10 @@
         "pk": 3,
         "model": "polls.poll",
         "fields": {
-            "pub_date": "2011-11-18 13:31:25",
-            "classification_low": "langweilig",
-            "question": "Der Vortragsstil war",
-            "classification_top": "gut",
+            "pub_date": "2011-12-08 17:02:16",
+            "classification_low": "uninteressant",
+            "question": "Question3",
+            "classification_top": "interessant",
             "talk": 1
         }
     },
@@ -36,54 +71,54 @@
         "pk": 1,
         "model": "polls.choice",
         "fields": {
-            "votes": 10,
-            "poll": 3,
-            "choice": "0"
+            "votes": 2,
+            "poll": 1,
+            "choice": "Q1C1"
         }
     },
     {
         "pk": 2,
         "model": "polls.choice",
         "fields": {
-            "votes": 23,
-            "poll": 3,
-            "choice": "1"
+            "votes": 4,
+            "poll": 1,
+            "choice": "Q1C2"
         }
     },
     {
         "pk": 3,
         "model": "polls.choice",
         "fields": {
-            "votes": 30,
-            "poll": 3,
-            "choice": "2"
+            "votes": 5,
+            "poll": 1,
+            "choice": "Q1C3"
         }
     },
     {
         "pk": 4,
         "model": "polls.choice",
         "fields": {
-            "votes": 12,
-            "poll": 1,
-            "choice": "0"
+            "votes": 0,
+            "poll": 2,
+            "choice": "Q2C1"
         }
     },
     {
         "pk": 5,
         "model": "polls.choice",
         "fields": {
-            "votes": 23,
-            "poll": 1,
-            "choice": "1"
+            "votes": 1,
+            "poll": 2,
+            "choice": "Q2C2"
         }
     },
     {
         "pk": 6,
         "model": "polls.choice",
         "fields": {
-            "votes": 34,
-            "poll": 1,
-            "choice": "3"
+            "votes": 4,
+            "poll": 2,
+            "choice": "Q2C3"
         }
     },
     {
@@ -91,88 +126,62 @@
         "model": "polls.choice",
         "fields": {
             "votes": 2,
-            "poll": 2,
-            "choice": "0"
+            "poll": 3,
+            "choice": "Q3C1"
         }
     },
     {
         "pk": 8,
         "model": "polls.choice",
         "fields": {
-            "votes": 4,
-            "poll": 2,
-            "choice": "1"
+            "votes": 0,
+            "poll": 3,
+            "choice": "Q3C2"
         }
     },
     {
         "pk": 9,
         "model": "polls.choice",
         "fields": {
-            "votes": 9,
-            "poll": 2,
-            "choice": "2"
+            "votes": 4,
+            "poll": 3,
+            "choice": "Q3C3"
         }
     },
     {
         "pk": 1,
-        "model": "talks.talk",
+        "model": "polls.comment",
         "fields": {
-            "pub_date": "2011-11-18 13:30:41",
-            "event": 1,
-            "name": "Pecha Kucha"
+            "comment": "War gut",
+            "pub_date": "2011-12-08 17:02:29",
+            "talk": 1
         }
     },
     {
-        "pk": 2,
-        "model": "talks.talk",
-        "fields": {
-            "pub_date": "2011-11-18 13:30:42",
-            "event": 1,
-            "name": "Java 7"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "talks.talk",
-        "fields": {
-            "pub_date": "2011-11-18 13:30:44",
-            "event": 1,
-            "name": "DevOps"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "events.event",
-        "fields": {
-            "pub_date": "2011-11-18 13:30:23",
-            "name": "Kopenhagen"
-        }
-    },
-    {
-        "pk": 37,
+        "pk": 40,
         "model": "auth.permission",
         "fields": {
             "codename": "add_logentry",
             "name": "Can add log entry",
-            "content_type": 13
+            "content_type": 14
         }
     },
     {
-        "pk": 38,
+        "pk": 41,
         "model": "auth.permission",
         "fields": {
             "codename": "change_logentry",
             "name": "Can change log entry",
-            "content_type": 13
+            "content_type": 14
         }
     },
     {
-        "pk": 39,
+        "pk": 42,
         "model": "auth.permission",
         "fields": {
             "codename": "delete_logentry",
             "name": "Can delete log entry",
-            "content_type": 13
+            "content_type": 14
         }
     },
     {
@@ -311,30 +320,30 @@
         }
     },
     {
-        "pk": 34,
+        "pk": 37,
         "model": "auth.permission",
         "fields": {
             "codename": "add_event",
             "name": "Can add event",
-            "content_type": 12
+            "content_type": 13
         }
     },
     {
-        "pk": 35,
+        "pk": 38,
         "model": "auth.permission",
         "fields": {
             "codename": "change_event",
             "name": "Can change event",
-            "content_type": 12
+            "content_type": 13
         }
     },
     {
-        "pk": 36,
+        "pk": 39,
         "model": "auth.permission",
         "fields": {
             "codename": "delete_event",
             "name": "Can delete event",
-            "content_type": 12
+            "content_type": 13
         }
     },
     {
@@ -362,6 +371,33 @@
             "codename": "delete_choice",
             "name": "Can delete choice",
             "content_type": 10
+        }
+    },
+    {
+        "pk": 31,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_comment",
+            "name": "Can add comment",
+            "content_type": 11
+        }
+    },
+    {
+        "pk": 32,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_comment",
+            "name": "Can change comment",
+            "content_type": 11
+        }
+    },
+    {
+        "pk": 33,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_comment",
+            "name": "Can delete comment",
+            "content_type": 11
         }
     },
     {
@@ -473,48 +509,48 @@
         }
     },
     {
-        "pk": 31,
+        "pk": 34,
         "model": "auth.permission",
         "fields": {
             "codename": "add_talk",
             "name": "Can add talk",
-            "content_type": 11
+            "content_type": 12
         }
     },
     {
-        "pk": 32,
+        "pk": 35,
         "model": "auth.permission",
         "fields": {
             "codename": "change_talk",
             "name": "Can change talk",
-            "content_type": 11
+            "content_type": 12
         }
     },
     {
-        "pk": 33,
+        "pk": 36,
         "model": "auth.permission",
         "fields": {
             "codename": "delete_talk",
             "name": "Can delete talk",
-            "content_type": 11
+            "content_type": 12
         }
     },
     {
         "pk": 1,
         "model": "auth.user",
         "fields": {
-            "username": "oberschulte",
+            "username": "hendrikh",
             "first_name": "",
             "last_name": "",
             "is_active": true,
             "is_superuser": true,
             "is_staff": true,
-            "last_login": "2011-11-18 06:20:27",
+            "last_login": "2011-12-08 10:00:31",
             "groups": [],
             "user_permissions": [],
-            "password": "sha1$f3ca2$5e801b59165db2b021921baf9e71905a6d8f3690",
-            "email": "co@innoq.com",
-            "date_joined": "2011-11-18 05:01:20"
+            "password": "sha1$145b7$8ce57a99dd70dede49aab7611b2b2a5e4bdabdc0",
+            "email": "hendrikh@innoq.com",
+            "date_joined": "2011-12-08 10:00:14"
         }
     }
 ]
