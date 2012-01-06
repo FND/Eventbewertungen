@@ -2,8 +2,6 @@ from django.db import models
 import datetime
 from talks.models import Talk
 
-# Create your models here.
-
 
 class Poll(models.Model):
     talk = models.ForeignKey(Talk)

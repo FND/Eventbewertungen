@@ -2,7 +2,6 @@ from django.db import models
 import datetime
 from events.models import Event
 
-# Create your models here.
 
 class Talk(models.Model):
     event = models.ForeignKey(Event)
