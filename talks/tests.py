@@ -1,5 +1,6 @@
 from django.utils import unittest
 from django.test import TestCase
+
 from talks.models import Talk
 
 

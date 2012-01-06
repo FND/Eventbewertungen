@@ -1,8 +1,10 @@
+import datetime
+
 from django.contrib import admin
+
 from talks.models import Talk
 from polls.models import Poll
 from polls.models import Comment
-import datetime
 
 
 class PollInline(admin.TabularInline):

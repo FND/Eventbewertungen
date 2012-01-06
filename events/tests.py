@@ -1,8 +1,10 @@
 import datetime
+
 from django.utils import unittest
 from django.test import TestCase
-from events.models import Event
 from django.test.client import Client
+
+from events.models import Event
 
 
 class EventTestCase(unittest.TestCase):

@@ -1,10 +1,12 @@
+import datetime
+
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template.context import RequestContext
+from django.http import HttpResponse
+
 from events.models import Event
 from talks.models import Talk
-import datetime
-from django.http import HttpResponse
 
 
 @login_required

@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import *
 from django.views.generic import DetailView, ListView
+
 from events.models import Event
 from talks.models import Talk
 

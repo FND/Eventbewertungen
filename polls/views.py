@@ -3,8 +3,9 @@ from django.shortcuts import get_object_or_404, render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
-from polls.models import Choice, Poll
 from django.contrib.auth.decorators import login_required
+
+from polls.models import Choice, Poll
 
 
 @login_required

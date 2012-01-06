@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import *
 from django.views.generic import DetailView, ListView
+
 from talks.models import Talk
 from polls.models import Poll
 from polls.models import Comment
