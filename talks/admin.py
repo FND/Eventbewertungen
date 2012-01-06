@@ -4,14 +4,17 @@ from polls.models import Poll
 from polls.models import Comment
 import datetime
 
+
 class PollInline(admin.TabularInline):
     model = Poll
+
 
 class CommentInline(admin.TabularInline):
     model = Comment
 
+
 class TalkAdmin(admin.ModelAdmin):
-    
+
     fieldsets = [
         (None,               {'fields': ['name']}),
         ('Date information', {'fields': ['pub_date']}),
@@ -24,5 +27,3 @@ class TalkAdmin(admin.ModelAdmin):
     date_hierarchy = 'pub_date'
 
 admin.site.register(Talk, TalkAdmin)
-
-

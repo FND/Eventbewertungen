@@ -6,6 +6,7 @@ from django.template import RequestContext
 from polls.models import Choice, Poll
 from django.contrib.auth.decorators import login_required
 
+
 @login_required
 def vote(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)
@@ -24,6 +25,7 @@ def vote(request, poll_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('poll_results', args=(p.id,)))
+
 
 @login_required
 def detail(request, poll_id):

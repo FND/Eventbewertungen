@@ -7,6 +7,7 @@ from talks.models import Talk
 import datetime
 from django.http import HttpResponse
 
+
 @login_required
 def detail(request, event_id):
     p = get_object_or_404(Event, pk=event_id)
@@ -14,8 +15,10 @@ def detail(request, event_id):
     return render_to_response('events/detail.html', {'event': p},
                                context_instance=RequestContext(request))
 
+
 def talk(request):
     pass
+
 
 def results(request, event_id):
     p = get_object_or_404(Event, pk=event_id)

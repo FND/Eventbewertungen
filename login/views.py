@@ -1,6 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 
+
 def login_view(request):
     username = request.POST['username']
     password = request.POST['password']
@@ -11,6 +12,7 @@ def login_view(request):
             HttpResponse("You're logged in.")
             # Redirect to a success page.
         else:
+            pass
             # Return a 'disabled account' error message
     else:
         HttpResponse("Your username and password didn't match.")

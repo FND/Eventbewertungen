@@ -2,9 +2,11 @@ from django.contrib import admin
 from events.models import Event
 from talks.models import Talk
 
+
 class TalkInline(admin.TabularInline):
     model = Talk
-    
+
+
 class EventAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['name']}),

@@ -4,7 +4,7 @@ from talks.models import Talk
 
 # Create your models here.
 
-    
+
 class Poll(models.Model):
     talk = models.ForeignKey(Talk)
     question = models.CharField(max_length=200)
@@ -18,6 +18,7 @@ class Poll(models.Model):
     def was_published_today(self):
         return self.pub_date.date() == datetime.date.today()
 
+
 class Choice(models.Model):
     poll = models.ForeignKey(Poll)
     choice = models.CharField(max_length=200)
@@ -25,6 +26,7 @@ class Choice(models.Model):
 
     def __unicode__(self):
         return self.choice
+
 
 class Comment(models.Model):
     talk = models.ForeignKey(Talk)

@@ -14,4 +14,3 @@ class Talk(models.Model):
 
     def was_published_today(self):
         return self.pub_date.date() == datetime.date.today()
-

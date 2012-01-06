@@ -3,6 +3,7 @@ from django.views.generic import DetailView, ListView
 from events.models import Event
 from talks.models import Talk
 
+
 urlpatterns = patterns('',
     (r'^$',
      ListView.as_view(

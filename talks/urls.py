@@ -4,6 +4,7 @@ from talks.models import Talk
 from polls.models import Poll
 from polls.models import Comment
 
+
 urlpatterns = patterns('',
     (r'^$',
         ListView.as_view(
